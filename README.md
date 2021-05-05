@@ -44,5 +44,6 @@ To build the extension locally for development or testing:
 
 1. Install [Node 10](https://nodejs.org/download/release/v10.24.1/) (and `npm`)
 2. Install `gulp` via `npm install --global gulp-cli`
-3. `cd` into the project root directory
-4. Run `gulp package` to build packaged zip files for both Chrome and Firefox (output to the `package` directory)
+4. `cd` into the project root directory
+5. Run `npm install && npm install natives@1.1.6`
+6. Run `gulp package` to build packaged zip files for both Chrome and Firefox (output to the `package` directory)
