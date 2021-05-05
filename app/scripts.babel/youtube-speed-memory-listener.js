@@ -72,10 +72,11 @@
         videoSpeed = video.playbackRate;
         videoName = (document.querySelector('ytmusic-player-bar .middle-controls .title') || document.querySelector('#info-contents .title') || document.querySelector('#eow-title')).innerText;
         videoThumbnailUrl = C.VIDEO_THUMBNAIL_TEMPLATE.replace('<<VIDEO_ID>>', videoId);
-        channelName = (document.querySelector('ytmusic-player-bar .middle-controls .byline') || document.querySelector('ytd-video-owner-renderer #channel-name') || document.querySelector('#owner-name a') || document.querySelector('#watch-header .yt-user-info a[href*="/channel/"]')).innerText;
-        channelThumbnailUrl = (document.querySelector('ytmusic-player-bar .middle-controls img') || document.querySelector('ytd-video-owner-renderer #avatar img') || document.querySelector('.ytd-video-owner-renderer #avatar img') || document.querySelector('#watch-header .video-thumb img')).src;
+        channelName = (document.querySelector('ytmusic-player-bar .middle-controls .byline') || document.querySelector('ytd-video-owner-renderer #channel-name #text a') || document.querySelector('#owner-name a') || document.querySelector('#watch-header .yt-user-info a[href*="/channel/"]')).innerText;
+        channelThumbnailUrl = (document.querySelector('ytmusic-player-bar .middle-controls img') || document.querySelector('#meta ytd-video-owner-renderer #avatar img') || document.querySelector('#watch-header .video-thumb img')).src;
       } catch (e) {
-        console.error('Unable to retrieve Tab info for YouTube Speed Memory', e);
+        if (videoInformationIntervalCounter === 20)
+          console.error('Unable to retrieve Tab info for YouTube Speed Memory', e);
       }
 
       if (videoInformationIntervalCounter > 20 || (videoId && videoSpeed && videoName && videoThumbnailUrl && channelName && channelThumbnailUrl)) {
@@ -94,7 +95,7 @@
       } else {
         videoInformationIntervalCounter++;
       }
-    }, 100);
+    }, 200);
   }
 
 })(chrome);
