@@ -43,5 +43,6 @@ If you have questions, problems or ideas, feel free to contact me at <a href="ma
 To build the extension locally for development or testing:
 
 1. Install `node` (and `npm`)
-2. `cd` into the project root directory
-3. Run `gulp package` to build packaged zip files for both Chrome and Firefox (output to the `package` directory)
+2. Install `gulp` via `npm install --global gulp-cli`
+3. `cd` into the project root directory
+4. Run `gulp package` to build packaged zip files for both Chrome and Firefox (output to the `package` directory)
