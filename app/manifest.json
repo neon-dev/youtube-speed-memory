@@ -47,5 +47,10 @@
 		},
 		"default_title": "YouTube Speed Memory",
 		"default_popup": "popup.html"
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{4fc58b71-f6e3-40fd-bcd1-bd3e5ac2e96d}"
+		}
 	}
 }
