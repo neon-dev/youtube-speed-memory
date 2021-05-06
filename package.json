@@ -8,6 +8,7 @@
   "bugs": "https://github.com/andrewbrey/youtube-speed-memory/issues",
   "dependencies": {
     "materialize-css": "1.0.0-rc.2",
+    "natives": "^1.1.6",
     "ramda": "0.25.0",
     "simple-scrollbar": "0.4.0"
   },
